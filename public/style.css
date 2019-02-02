@@ -1,0 +1,27 @@
+.test {
+    color: cyan;
+    background: darkcyan;
+    font-size: 48px;
+    padding: 5px;
+    text-align: center;
+    text-shadow: black 3px 3px 6px;
+    border-radius: 10px;
+    /*border: 5px solid #024d4d;*/
+    border-top: 5px solid #024d4d;
+    border-left: 5px solid #024d4d;
+    width: 200px;
+    /*height: 200px;*/
+    cursor: pointer;
+    font-weight: bolder;
+    margin: auto;
+    font-family: boycott;
+    user-select: none;
+}
+.test:active{
+    border-top: 5px solid darkcyan;
+    border-left: 5px solid darkcyan;
+    text-shadow: black 0 0 0px;
+    /*padding: 4px;
+    transform: translateY(-4px);*/
+    width: 190px;
+}
