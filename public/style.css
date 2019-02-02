@@ -14,14 +14,14 @@
     cursor: pointer;
     font-weight: bolder;
     margin: auto;
-    font-family: boycott;
+    font-family: monospace;
     user-select: none;
 }
 .test:active{
     border-top: 5px solid darkcyan;
     border-left: 5px solid darkcyan;
-    text-shadow: black 0 0 0px;
-    /*padding: 4px;
+    text-shadow: black -3px -3px 6px;
+    /* padding: 4px;
     transform: translateY(-4px);
-    width: 195px;*/
+    width: 195px; */
 }
