@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,36 +8,52 @@
     <title>This Is My Site</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        h1 {font-family: boycott}
-        html, body {
+        h1 {
+            font-family: boycott
+        }
+
+        html,
+        body {
             margin: 2;
             padding: 0;
-            background: #bab9b9
+            background: #4b4a4a;
+            color: #bebebe;
         }
+
         table {
             border-top: 3px solid blueviolet;
             border-left: 3px solid blueviolet;
         }
     </style>
 </head>
+
 <body>
     <div class="test">Test</div>
     <h1 style="color: #2d6441">Hello World</h1>
-    <ul>
-        <li>page</li>
-        <li>site</li>
-        <li>document</li>
-        <li>resource</li>
-        <li>мое</li>
-        <li>hello</li>
+    <ul id="list_body">
+        <li class="list_el">page</li>
+        <li class="list_el">site</li>
+        <li class="list_el">document</li>
+        <li class="list_el">resource</li>
+        <li class="list_el">мое</li>
+        <li class="list_el">hello</li>
     </ul>
     TEST Русский
     <br>
     <img src="зм.png" alt="">
     <img src="фр.png" alt="">
     <br>
-    <a href="https://yandex.ru" class="ref">Yandex</a>
+    <a href="https://yandex.ru" id="ya" role="button">
+        <span class="link_ya">
+            <span id="ya_fist-leter">Y</span>andex
+        </span>
+    </a>
     <table>
+        <tr id="header_table">
+            <th>one</th>
+            <th>two</th>
+            <th>three</th>
+        </tr>
         <tr>
             <td>1</td>
             <td>2</td>
@@ -53,5 +70,14 @@
             <td>9</td>
         </tr>
     </table>
+    <p><a href="https://vk.com" id="vk">VK</a></p>
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
 </body>
+
 </html>

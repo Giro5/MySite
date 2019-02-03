@@ -4,7 +4,7 @@
     font-size: 48px;
     padding: 5px;
     text-align: center;
-    text-shadow: black 3px 3px 6px;
+    text-shadow: black 1px 1px 6px;
     border-radius: 10px;
     /*border: 5px solid #024d4d;*/
     border-top: 5px solid #024d4d;
@@ -17,14 +17,41 @@
     font-family: monospace;
     user-select: none;
 }
-.test:active{
+.test:active {
     border-top: 5px solid darkcyan;
     border-left: 5px solid darkcyan;
-    text-shadow: black -3px -3px 6px;
+    /* text-shadow: black -3px -3px 6px; */
     /* padding: 4px;
     transform: translateY(-4px);
     width: 195px; */
 }
-.ref{
+.test:hover {
+    text-shadow: black 3px 3px 6px;
+}
+a#ya {
+    color: white;
+    font-size: 24px;
+    font-weight: 200;
+    text-decoration: none;
+    padding: 5px;
+}
+a#vk {
+    color: cornflowerblue;
+}
+span#ya_fist-leter{
     color: red;
 }
+a#ya:hover {
+    color: red;
+}
+.list_el:hover {
+    color: white;
+    font-size: 120%;
+}
+tr#header_table {
+    border-bottom: 5px solid blueviolet; 
+}
+ul#list_body {
+    width: 200px;
+}
+
