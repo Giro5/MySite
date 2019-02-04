@@ -47,11 +47,19 @@ a#ya:hover {
 .list_el:hover {
     color: white;
     font-size: 120%;
+    cursor: pointer;
 }
 tr#header_table {
     border-bottom: 5px solid blueviolet; 
 }
 ul#list_body {
     width: 200px;
+}
+span.hello_word:hover {
+    font-size: 110%;
+}
+a {
+    color: #bebebe;
+    text-decoration: none;
 }
 
