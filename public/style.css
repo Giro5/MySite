@@ -56,10 +56,10 @@ ul#list_body {
     width: 200px;
 }
 span.hello_word:hover {
-    font-size: 110%;
+    font-size: 120%;
+
 }
 a {
     color: #bebebe;
     text-decoration: none;
 }
-
