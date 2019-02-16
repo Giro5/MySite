@@ -36,7 +36,10 @@ a#ya {
     padding: 5px;
 }
 a#vk {
-    color: cornflowerblue;
+    color: #598ae6;
+}
+a#vk:hover{
+    color: #76aadb;
 }
 span#ya_fist-leter{
     color: red;
