@@ -45,7 +45,7 @@ body {
     border-radius: 4px;
 }
 .menu_btn:hover {
-    background:  gray;
+    background:  rgb(121, 194, 207);
 }
 .fon {
     position: relative;
