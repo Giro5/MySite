@@ -13,18 +13,18 @@
 .header {
     width: 100%;
     height: 150px;
-    background: white;
+    background: #e6e4e4;
 
 }
 .content {
     width: 100%;
     height: 400px;
-    background: blue;
+    background: #1515e9;
 
 }
 .footer {
     width: 100%;
     height: 200px;
-    background: blueviolet;
+    background: #e70909;
 
 }
