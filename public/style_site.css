@@ -28,6 +28,9 @@ body {
     display: flex;
     justify-content:  center;
     align-items: center;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .menu {
@@ -49,6 +52,9 @@ body {
     align-items: center;
     width: 80px;
     border-radius: 4px;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
 }
 
 .menu_btn:hover {
