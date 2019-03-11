@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+body {
+    background: #44444d;
+    color: #dfd6df;
+}
+
 .site {
     /* background: #917878; */
     /* color: #bebebe; */
@@ -10,21 +15,21 @@
     /* height: 600px; */
     margin: auto;
 }
+
 .header {
     width: 100%;
     height: 300px;
     background: #e6e4e4;
-
 }
+
 .content {
     width: 100%;
     height: 300px;
     background: #1515e9;
-
 }
+
 .footer {
     width: 100%;
     height: 300px;
     background: #e70909;
-
 }

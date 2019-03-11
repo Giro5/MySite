@@ -1,3 +1,21 @@
+h1 {
+    font-family: boycott;
+    color: deepskyblue;
+}
+
+html, body {
+    margin: 2;
+    padding: 0;
+    background: #44444d;
+    color: #dfd6df;
+    font-size: 18px;
+}
+
+table {
+    border-top: 3px solid blueviolet;
+    border-left: 3px solid blueviolet;
+}
+
 .test {
     color: cyan;
     background: darkcyan;
@@ -17,6 +35,7 @@
     font-family: monospace;
     user-select: none;
 }
+
 .test:active {
     border-top: 5px solid darkcyan;
     border-left: 5px solid darkcyan;
@@ -25,9 +44,11 @@
     transform: translateY(-4px);
     width: 195px; */
 }
+
 .test:hover {
     text-shadow: black 3px 3px 6px;
 }
+
 a#ya {
     color: white;
     font-size: 24px;
@@ -35,33 +56,41 @@ a#ya {
     text-decoration: none;
     padding: 5px;
 }
+
 a#vk {
     color: #598ae6;
 }
-a#vk:hover{
+
+a#vk:hover {
     color: #76aadb;
 }
-span#ya_fist-leter{
+
+span#ya_first-leter {
     color: red;
 }
+
 a#ya:hover {
     color: red;
 }
+
 .list_el:hover {
     color: white;
     font-size: 120%;
     cursor: pointer;
 }
+
 tr#header_table {
-    border-bottom: 5px solid blueviolet; 
+    border-bottom: 5px solid blueviolet;
 }
+
 ul#list_body {
     width: 200px;
 }
+
 span.hello_word:hover {
     font-size: 120%;
-
 }
+
 a {
     color: #bebebe;
     text-decoration: none;
