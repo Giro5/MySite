@@ -4,3 +4,23 @@ body {
     background: #44444d;
     color: #dfd6df;
 }
+
+.btn {
+    text-align: center;
+    font-style: italic;
+    font-size: 40px;
+    width: 50px;
+    margin: auto;
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+
+.btn:hover {
+    color: #bfbfbf;
+}
+
+.btn:active {
+    text-shadow: #dfd6df 0 0 1px;
+}
