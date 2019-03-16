@@ -117,19 +117,126 @@ var uksivt = {
 //     return a;
 // }
 
-function Add(a, b) {
-    return a + b;
+// function Add( a, b) {
+//     return a + b;
+// }
+// function Subtract(a, b) {
+//     return a - b;
+// }
+// function Multiply(a, b) {
+//     return a * b;
+// }
+// function Divide(a, b) {
+//     return a / b;
+// }
+// console.log(Add(1, 5));
+// console.log(Subtract(1, 5));
+// console.log(Multiply(1, 5));
+// console.log(Divide(1, 5));
+
+//object-function
+//creating f-o
+
+//1
+function newObject() {
+    //private prop/values
+    var priv = 1;
+    //private func/methods
+    var privFunc = function () {
+
+    };
+    function privFunc2() {
+        var a = 1;
+        console.log(priv);
+    };
+
+    //public prop/values
+    this.pub = 2;
+    //public func/methods
+    this.pubFunc = function () {
+        console.log("public func");
+    };
 }
-function Subtract(a, b) {
-    return a - b;
+var n0 = new newObject();
+console.log(n0.pub);
+n0.pubFunc();
+//2
+var newObject2 = new function () {
+
 }
-function Multiply(a, b) {
-    return a * b;
+//newObject2. ...
+var json = {
+    pubVar: 1,
+    pubFunc: function () {
+        this.pubVar = 3;
+        // alert("test");
+    }
 }
-function Divide(a, b) {
-    return a / b;
-}
-console.log(Add(1, 5));
-console.log(Subtract(1, 5));
-console.log(Multiply(1, 5));
-console.log(Divide(1, 5));
+json.pubVar = 2;
+console.log(json.pubVar);
+json.pubFunc();
+console.log(json.pubVar);
+console.dir(json);
+
+//json and Function-O
+var oFaJson = new function () {
+    var oJson = {
+        a: 1,
+        b: function () {
+
+        }
+    };
+    oJson.a = 2;
+    this.pub = oJson;
+
+};
+oFaJson.pub.a = 2;
+
+//misstakes with func and json
+//1 - without new
+//2 - without , in json-array
+//3 - without ;
+//4 - неверно указано this
+//5 - ошибки с областью видимости
+//6 - uncorrect launched methods and properties
+//7 - uncorrect using properies/values and functions/methods
+
+//logical operations
+//if-else structre
+//1 - if (condition) {do}
+//2 - if (condition) {do} else {do}
+//3 - if (condition) {do} else if (conditon) else {do}
+
+// var a = 1;
+// if (a == 1) { }//true
+// if (a != 1) { }//false
+// if (a > 1) { }//false
+// if (a >= 1) { }//true
+// if (a != 1)/*false*/ { } else/*true*/ { }
+// if (a > 1)/*false*/ { } else if (a < 1)/*false*/ { } else/*true*/ { }
+
+//switch structre
+/*switch(argument){
+*     case may_value:
+*         do_smth
+*         break;
+*     default: do;
+*}*/
+
+// var s = 1;
+// switch (s) {
+//     case 0:
+//         alert(0);
+//         break;
+//     case 1:
+//         alert(1);
+//     default:
+//         alert("default");
+// }
+
+//циклы
+//for(initiliaze; condition; increment/decrement) {do}
+//for(var name_value in array) {do}
+//for(var name_value of array) {do}
+//while(condition) {do}
+//do {do} while(condition);
