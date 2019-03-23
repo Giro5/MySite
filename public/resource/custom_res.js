@@ -251,7 +251,7 @@ oFaJson.pub.a = 2;
 //цикл с постусловием
 //do {do} while(condition);
 
-var arr = [1, 2, 3, 4, 5, 6, 7];
+var arr = [1, 2, 3, 4, 5];
 
 console.log("for");
 for (var i = 0; i < arr.length; i++) {
@@ -265,19 +265,52 @@ while (a < arr.length) {
     a++;
 }
 
-console.log("dowhile");
+console.log("do_while");
 var a = 0;
 do {
     console.log(arr[a]);
     a++;
 } while (a < arr.length);
 
-console.log("forin");
+console.log("for_in");
 for (var c in arr) {
     console.log(c);
 }
 
-console.log("forof");
+console.log("for_of");
 for (var c of arr) {
     console.log(c);
+}
+
+//многомерные массивы, вложенные циклы
+var arr2 = [[1, 2, 3], [5, 6, 7]];
+for (var i = 0; i < arr2.length; i++) {
+    console.dir(arr2[i]);
+    for (var j = 0; j < arr2[i].length; j++) {
+        console.log(arr2[i][j]);
+    }
+    console.log();
+}
+//определение элементов
+var arr3 = [];
+for (var i = 0; i < 10; i++) {
+    arr3[i] = i + 1;
+}
+console.dir(arr3);
+
+var json = {
+    1: 0,
+    a: [1, 2, 3, 4],
+    test: 1
+}
+console.dir(json);
+// console.log(json[1]);
+// for (var i = 0; i < 3; i++) {
+//     if (!json[i])
+//         continue;
+//     console.dir(json[i]);
+// }
+for (var c in json) {
+    console.log(c);
+    console.dir(json[c]);
 }
