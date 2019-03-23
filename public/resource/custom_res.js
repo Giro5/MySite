@@ -235,8 +235,49 @@ oFaJson.pub.a = 2;
 // }
 
 //циклы
+
+//для целочисленных массивов
 //for(initiliaze; condition; increment/decrement) {do}
+
+//для пошагового чтения любого массива
 //for(var name_value in array) {do}
+
+//для пошагового чтения объектов и массивов
 //for(var name_value of array) {do}
+
+//для логических операций
 //while(condition) {do}
+
+//цикл с постусловием
 //do {do} while(condition);
+
+var arr = [1, 2, 3, 4, 5, 6, 7];
+
+console.log("for");
+for (var i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+}
+
+console.log("while");
+var a = 0;
+while (a < arr.length) {
+    console.log(arr[a]);
+    a++;
+}
+
+console.log("dowhile");
+var a = 0;
+do {
+    console.log(arr[a]);
+    a++;
+} while (a < arr.length);
+
+console.log("forin");
+for (var c in arr) {
+    console.log(c);
+}
+
+console.log("forof");
+for (var c of arr) {
+    console.log(c);
+}
