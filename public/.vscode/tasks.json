@@ -6,11 +6,12 @@
         {
             "label": "launch",
             "type": "shell",
-            "command": "start index.html",
+            "command": "start index.html browser",
             "group": {
                 "kind": "build",
                 "isDefault": true
-            }
+            },
+            "problemMatcher": []
         }
     ]
 }
