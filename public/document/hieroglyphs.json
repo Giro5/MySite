@@ -1,0 +1,42 @@
+﻿{
+    "隻狼": {
+        "pronunciation": "sekiro",
+        "value": "корабль волк",
+        "desired_value": "однорукий волк",
+        "隻": {
+            "pronunciation": "seki",
+            "value": "водослив",
+            "desired_value": "однорукий"
+        },
+        "狼": {
+            "pronunciation": "okami",
+            "desired_pronunciation": "ro",
+            "value": "волк"
+        }
+    },
+    "死": {
+        "pronunciation": "shi",
+        "value": "смерть"
+    },
+    "危": {
+        "pronunciation": "ki",
+        "value": "берегись"
+    },
+    "治": {
+        "pronunciation": "osamu",
+        "value": "лечение"
+    },
+    "回生": {
+        "pronunciation": "kaisei",
+        "value": "регенеративный",
+        "desired_value": "возрождение",
+        "回": {
+            "pronunciation": "kai",
+            "value": "раз"
+        },
+        "生": {
+            "pronunciation": "nama",
+            "value": "рождение"
+        }
+    }
+}

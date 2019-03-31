@@ -30,11 +30,29 @@
 //         return;
 // }, 1);
 
-document.getElementById("btnID").click.bind(function () {
-    for (var i = 0; i < 360; i++) {
-        console.log(i);
-        document.getElementById("btnID").style.transform = "rotate(" + i.toString() + "deg)";
-    }
+//rotation click_btn
+// document.getElementById("btnID").click.bind(function () {
+//     for (var i = 0; i < 360; i++) {
+//         console.log(i);
+//         document.getElementById("btnID").style.transform = "rotate(" + i.toString() + "deg)";
+//     }
+// });
+// // document.getElementById("btnID").click += rot();
+// console.log(document.getElementById("btnID").click);
+
+//reading json file
+function loadJSON(callback) {
+    var xobj = new XMLHttpRequest();
+    xobj.overrideMimeType("application/json");
+    xobj.open("GET", "hieroglyphs.json", true);
+    xobj.onreadystatechange = function () {
+        if (xobj.readyState == 4 && xobj.status == "200") {
+            callback(JSON.parse(xobj.responseText));
+        }
+    };
+    xobj.send(null);
+};
+loadJSON(function (json) {
+    console.dir(json);
+    console.log(json.隻狼.pronunciation);
 });
-// document.getElementById("btnID").click += rot();
-console.log(document.getElementById("btnID").click);
