@@ -316,3 +316,14 @@ for (var c in json) {
 }
 
 //5.4.19
+var i = 0;
+var time = setInterval(function () {
+    console.log(i++);
+    if (i > 10) {
+        clearInterval(time);
+    }
+}, 1000);
+
+setTimeout(function () {
+    console.log("test");
+}, 1000);
