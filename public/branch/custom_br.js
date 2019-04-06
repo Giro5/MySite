@@ -56,8 +56,32 @@
 // });
 
 //animation
-$(".animate").animate({
-    //css
-}, {
-        //options animate
-    })
+var animeright = function () {
+    $(".animate").animate({
+        //css
+        left: "+=100"
+    }, {
+            //options animate
+            duration: 2000,
+            complete: function () {
+                console.log("animation is finished");
+                animeleft();
+            }
+        })
+};
+
+var animeleft = function () {
+    $(".animate").animate({
+        //css
+        left: "-=100"
+    }, {
+            //options animate
+            duration: 2000,
+            complete: function () {
+                console.log("animation is finished");
+                animeright();
+            }
+        })
+};
+
+animeright();
