@@ -59,29 +59,53 @@
 var animeright = function () {
     $(".animate").animate({
         //css
-        left: "+=100"
+        left: "+=1000"
     }, {
             //options animate
             duration: 2000,
+            complete: function () {
+                console.log("animation is finished");
+                animedown();
+            }
+        })
+};
+var animedown = function () {
+    $(".animate").animate({
+        //css
+        top: "+=500"
+    }, {
+            //options animate
+            duration: 1080,
             complete: function () {
                 console.log("animation is finished");
                 animeleft();
             }
         })
 };
-
 var animeleft = function () {
     $(".animate").animate({
         //css
-        left: "-=100"
+        left: "-=1000"
     }, {
             //options animate
             duration: 2000,
+            complete: function () {
+                console.log("animation is finished");
+                animeup();
+            }
+        })
+};
+var animeup = function () {
+    $(".animate").animate({
+        //css
+        top: "-=500"
+    }, {
+            //options animate
+            duration: 1080,
             complete: function () {
                 console.log("animation is finished");
                 animeright();
             }
         })
 };
-
 animeright();
