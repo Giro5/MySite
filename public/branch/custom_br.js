@@ -59,10 +59,11 @@
 var animeright = function () {
     $(".animate").animate({
         //css
-        left: "+=100"
+        left: "+=800",
+        top: "+=800"
     }, {
             //options animate
-            duration: 2000,
+            duration: 3000,
             complete: function () {
                 console.log("animation is finished");
                 animeleft();
@@ -73,10 +74,11 @@ var animeright = function () {
 var animeleft = function () {
     $(".animate").animate({
         //css
-        left: "-=100"
+        left: "-=800",
+        top: "-=800"
     }, {
             //options animate
-            duration: 2000,
+            duration: 3000,
             complete: function () {
                 console.log("animation is finished");
                 animeright();
