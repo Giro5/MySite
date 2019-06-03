@@ -14,6 +14,25 @@ html, body {
 table {
     border-top: 3px solid blueviolet;
     border-left: 3px solid blueviolet;
+    border-radius: 10px;
+    box-shadow: black 1px 1px 4px 1px;
+}
+
+td:hover {
+    text-shadow: white 0px 0px 6px;
+}
+
+th:hover {
+    text-shadow: red 0px 0px 6px;
+}
+
+td {
+    text-align: center;
+}
+
+th {
+    border-bottom: 1px solid rebeccapurple;
+    border-radius: 5px;
 }
 
 .test {

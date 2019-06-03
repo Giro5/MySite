@@ -66,7 +66,8 @@ var animeright = function () {
             duration: 3000,
             complete: function () {
                 console.log("animation is finished");
-                animedown();
+                // animedown();
+                animeleft();
             }
         })
 };
@@ -93,7 +94,8 @@ var animeleft = function () {
             duration: 3000,
             complete: function () {
                 console.log("animation is finished");
-                animeup();
+                // animeup();
+                animeright();
             }
         })
 };
@@ -111,3 +113,16 @@ var animeup = function () {
         })
 };
 animeright();
+
+$(".animate").on("click", function () {
+    if ($(".animate").css("background-color") == "rgb(255, 0, 0)")
+        $(".animate").css("background-color", "rgb(0, 0, 0)");
+    else if ($(".animate").css("background-color") == "rgb(0, 0, 0)")
+        $(".animate").css("background-color", "rgb(0, 0, 255)");
+    else if ($(".animate").css("background-color") == "rgb(0, 0, 255)")
+        $(".animate").css("background-color", "rgb(0, 255, 0)");
+    else if ($(".animate").css("background-color") == "rgb(0, 255, 0)")
+        $(".animate").css("background-color", "rgb(255, 255, 255)");
+    else if ($(".animate").css("background-color") == "rgb(255, 255, 255)")
+        $(".animate").css("background-color", "rgb(255, 0, 0)");
+});
