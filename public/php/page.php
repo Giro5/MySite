@@ -1,0 +1,1 @@
+<a href="/php/index.php?a=lol&b=kek">go to home page</a>

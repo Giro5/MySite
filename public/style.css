@@ -28,6 +28,8 @@ th:hover {
 
 td {
     text-align: center;
+    user-select: none;
+    cursor: pointer;
 }
 
 th {
