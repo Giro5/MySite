@@ -14,7 +14,7 @@ echo $_GET['a'] . ' и ' . $_GET['b'];
 
 echo "<br>";
 
-if(isset($_GET['a']) AND isset($_GET['b'])){
+if (isset($_GET['a']) and isset($_GET['b'])) {
     echo "params updated";
 }
 
