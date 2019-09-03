@@ -19,3 +19,5 @@ if(isset($_GET['a']) AND isset($_GET['b'])){
 }
 
 echo "<a href='update.php'>Update</a>";
+
+echo "<br>" . pow(0.5, 0.5);
