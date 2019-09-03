@@ -26,9 +26,15 @@ namespace MAFbrief
         private double Solution(string text)
         {
             double Result = 0;
-            text = string.Join(" ", text.Split(), 0, new[] { Plus, Minus, Mul, Div, "Mod", "^", "yroot" }
-                                                           .Any(x => x == text.Split().Last()) ? text.Split().Length - 1 : text.Split().Length)
-                              .Remove(0, text.Length > 0 && text[0] == ' ' ? 1 : 0);//форматирование/подготовка строки для решения
+            text = text.TrimStart().TrimEnd();
+            text = string.Join(
+                " ",
+                text.Split(),
+                0,
+                (new[] { Plus, Minus, Mul, Div, "Mod", "^", "yroot" }
+                    .Any(x => x == text.Split().Last())
+                        ? text.Split().Length - 1 : text.Split().Length)//вырезает операцию из уравнения т.к. не задан второй операнд
+            );
             try//если решать ничего не нужно
             {
                 Result = Convert.ToDouble(text);
