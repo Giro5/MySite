@@ -14,10 +14,8 @@ echo $_GET['a'] . ' и ' . $_GET['b'];
 
 echo "<br>";
 
-if(isset($_GET['a']) AND isset($_GET['b'])){
+if (isset($_GET['a']) and isset($_GET['b'])) {
     echo "params updated";
 }
 
 echo "<a href='update.php'>Update</a>";
-
-echo "<br>" . pow(0.5, 0.5);
