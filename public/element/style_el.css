@@ -4,3 +4,8 @@ body {
     background: #44444d;
     color: #dfd6df;
 }
+
+td {
+    user-select: none;
+    cursor: pointer;
+}

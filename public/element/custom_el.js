@@ -1,7 +1,9 @@
-var nums = document.getElementsByClassName("nums")
-var a, b, f;
-for (var i = 0; i < nums.length; i++) {
-    nums[i].getClientRects.bind(function () {
+for (let i = 0; i < 9; i++) {
+    document.getElementsByTagName("td")[i].onclick = function (e) {
+        console.log(e.target.innerText);
+    };
+}
 
-    })
+function Solution(text) {
+
 }
