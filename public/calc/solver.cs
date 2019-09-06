@@ -9,7 +9,7 @@ using System.Threading;
 
 namespace MAFbrief
 {
-    public partial class Solver
+    public class Solver
     {
         const string Mul = "*";//константа строки умножения
         const string Plus = "+";//константа строки плюса

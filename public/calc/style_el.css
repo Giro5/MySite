@@ -60,6 +60,8 @@ td:active:nth-child(10) {
 
 #inputer {
     font-size: 20px;
+    overflow: scroll;
+    text-align: center;
 }
 
 .pad {
