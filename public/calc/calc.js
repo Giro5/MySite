@@ -37,7 +37,15 @@ function Solution(text) {
     if (text.includes("(")) {
         let ibegin = null,
             iend = null;
-        // text += ")".repeat();
+        text += ")".repeat(text.match(/[(]/g).length - text.match(/[)]/g).length);
+        console.log(text);
+        while (text.includes("(")) {
+            ibegin = text.search(/[(\z]/g);
+            iend = text.indexOf(")", ibegin + 1);
+            console.log(ibegin);
+            console.log(iend);
+            text = "";
+        }
     }
     //finish solution
     text = text.replace(/[+-/*%/^]/g, x => ` ${x} `);
