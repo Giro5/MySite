@@ -35,16 +35,20 @@ function Solution(text) {
     text = text.replace(/[ ]/g, "");
     //solution for brackets
     if (text.includes("(")) {
-        let ibegin = null,
-            iend = null;
+        let ibegin = -1,
+            iend = -1;
         text += ")".repeat(text.match(/[(]/g).length - text.match(/[)]/g).length);
         console.log(text);
         while (text.includes("(")) {
-            ibegin = text.search(/[(\z]/g);
+            ibegin = text.lastIndexOf("(");
             iend = text.indexOf(")", ibegin + 1);
-            console.log(ibegin);
-            console.log(iend);
-            text = "";
+            if (false) {
+
+            }
+            else
+                res = Solution(text.substring(ibegin + 1, iend));
+            console.log(text.slice(0, ibegin) + res.toString() + text.slice(iend + 1, text.length));
+            text = text.slice(0, ibegin) + res.toString() + text.slice(iend + 1, text.length);
         }
     }
     //finish solution
