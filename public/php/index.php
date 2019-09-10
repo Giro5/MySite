@@ -1,7 +1,5 @@
-<meta charset="UTF-8">
-
 <?php
-
+session_start();
 // echo "hello shit";
 
 // echo "<br>";
@@ -148,6 +146,7 @@
 // var_dump($_POST["a"]);
 // var_dump($_POST["b"]);
 // 
+// 
 ?>
 <!-- <form action="" method="post">
     <input type="text" name="b" placeholder="login">
@@ -158,3 +157,83 @@
 </form> -->
 
 <?php
+
+//include "test.php";//connect a public file
+//include "../../private/private.php";//connect a private file
+
+//file system
+
+//1. work w/ files
+//1.1. detailed
+//fopen(file_name, mode)
+
+//mode: 
+//r - open file for reading(pointer at start)
+//r+ - open file for reading & writing(pointer at start)
+//w - open file clear all & writing
+//w+ - open file as just "w" mode w/ reading
+//a - open file for writing(pointer at end)
+//a+ - open file as "a" mode w/ reading
+//the open of file include in container
+
+// $fo = fopen("test.txt", "a+");
+
+//manipulation w/ file
+//reading
+//1. linear
+//2. symbolic
+//3. bytes
+
+//1 - fgets(resource, byte_length); example:
+// if ($fo) {
+//     while (($buffer = fgets($fo, 4096)) !== false)
+//         echo $buffer . "<br>";
+//     if (!feof($fo))
+//         echo "error: fgets is breaked";
+//     fclose($fo);
+// }
+
+//2 - fgetc(resource);
+// if (!$fo)
+//     echo "error while open the file " . $fo;
+// while (false !== ($char = fgetc($fo)))
+//     echo $char;
+// fclose($fo);
+
+//write
+//fwrite(resource, text)
+// $text = "\nhello";
+// $fw = fwrite($fo, $text); //any mode is working besides a mode "r"
+// if (!$fw) {
+//     echo "error data is not writing";
+// }
+
+//remove or delete
+//unlink(resource);
+// unlink("test.txt");
+
+//simple solution
+//1. file_get_contents(file_path) - open/read
+//2. file_put_contents(file_path, text) - open/write
+//getting
+// $f = file_get_contents("test.txt");
+// echo implode("<br>", explode("\n", $f));
+//putting
+// file_put_contents("test.txt", "hello"); //rewrite
+//file_put_contents("test.txt", "hello\n", FILE_APPEND);//after write
+
+//file_exists(file_path)
+// if (!file_exists("test.txt")) {
+//     echo "file is missing";
+// } else {
+//     echo "file has found";
+// }
+
+// //get directory info
+// var_dump(scandir("c:/users/"));
+
+
+
+echo $_SESSION["test"];
+
+$_SESSION["test"] = "test";
