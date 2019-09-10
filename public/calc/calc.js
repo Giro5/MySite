@@ -1,4 +1,8 @@
 function Solution(text) {
+    if (text == "e")
+        return Math.E;
+    if (text == "π")
+        return Math.PI;
     text = text.replace(/[ ]/g, "");//full trim
     //solution for brackets
     if (text.includes("(")) {
