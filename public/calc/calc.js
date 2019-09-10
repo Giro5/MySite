@@ -1,7 +1,4 @@
 function Solution(text) {
-    let res = Number(text);
-    if (!Number.isNaN(res))
-        return res;
     text = text.replace(/[ ]/g, "");//full trim
     //solution for brackets
     if (text.includes("(")) {
@@ -13,7 +10,6 @@ function Solution(text) {
             ibegin = text.lastIndexOf("(");
             iend = text.indexOf(")", ibegin + 1);
             if (ibegin > 0 && !(["+", "-", "*", "/", "%", "^", "("].some(x => x == text[ibegin - 1]))) {
-                //text[i] != /\d/ &&
                 for (let i = ibegin - 1; i >= 0; i--) {
                     if (["+", "-", "*", "/", "%", "^", "("].some(x => x == text[ibegin - 1]))
                         break;
@@ -24,11 +20,14 @@ function Solution(text) {
             }
             else
                 res = Solution(text.substring(ibegin + 1, iend));
-            console.log(text.slice(0, ibegin) + res.toString() + text.slice(iend + 1, text.length));
             text = text.slice(0, ibegin) + res.toString() + text.slice(iend + 1, text.length);
         }
     }
-    //finish solution
+    //check for numebr after remove of brackets
+    res = Number(text);
+    if (!Number.isNaN(res))
+        return res;
+    //calculating a simple operands
     text = text.replace(/[+-/*%/^]/g, x => ` ${x} `);
     let txt = text.split(" "),
         rank = 0,
@@ -59,6 +58,7 @@ function Solution(text) {
             i = txt.length;
             rank++;
         }
+        console.log("rank" + rank);
     }
     console.log(text + " = " + res);
     return res;
@@ -78,17 +78,11 @@ function SolutionFunc(text) {
             if (Result == 0)
                 Result = 1;
             break;
-        case "10^"://10 в степени (много не ставить, а то даже кальк винды ругается)
-            Result = Math.pow(10.0, Result);
-            break;
         case "sqrt"://квадратный корень
             Result = Math.sqrt(Result);
             break;
         case "sqr"://квадрат
             Result = Math.pow(Result, 2.0);
-            break;
-        case "1/":
-            Result = 1.0 / Result;
             break;
         case "cube":
             Result = Math.pow(Result, 3.0);
@@ -105,7 +99,7 @@ function SolutionFunc(text) {
         case "-":
             Result = -Result;
             break;
-        case "abc":
+        case "abs":
             Result = Math.abs(Result);
             break;
         //trigonometry func
@@ -116,64 +110,44 @@ function SolutionFunc(text) {
             Result = Math.cos(Result);
             break;
         case "tan":
-            Result = Math.tan(Result);
-            break;
         case "tg":
             Result = Math.tan(Result);
             break;
         case "cot":
-            Result = 1 / Math.tan(Result);
-            break;
         case "ctg":
-            Result = Math.cos(Result) / Math.sin(Result);
+            Result = 1 / Math.tan(Result);
             break;
         //arc trigonometry func
         case "asin":
-            Result = Math.asin(Result);
-            break;
         case "arcsin":
             Result = Math.asin(Result);
             break;
         case "acos":
-            Result = Math.acos(Result);
-            break;
         case "arccos":
             Result = Math.acos(Result);
             break;
         case "atan":
-            Result = Math.atan(Result);
-            break;
         case "arctan":
             Result = Math.atan(Result);
             break;
-        case "arcctg":
-            Result = Math.PI / 2 - Math.atan(Result);
-            break;
         case "acot":
+        case "arcctg":
             Result = Math.PI / 2 - Math.atan(Result);
             break;
         //hyperbolic trigonometry func
         case "sinh":
-            Result = Math.sinh(Result);
-            break;
         case "sh":
             Result = Math.sinh(Result);
             break;
         case "cosh":
-            Result = Math.cosh(Result);
-            break;
         case "ch":
             Result = Math.cosh(Result);
             break;
         case "tanh":
-            Result = Math.tanh(Result);
-            break;
         case "th":
             Result = Math.tanh(Result);
             break;
         case "coth":
-            Result = 1 / Math.tanh(Result);
-            break;
         case "cth":
             Result = 1 / Math.tanh(Result);
             break;
