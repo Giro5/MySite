@@ -21,11 +21,11 @@ $db_user = "root";
 $db_pass = "";
 $db_name = "site_php";
 
-$link = mysqli_connect("192.168.0.106", "root", "", "site_php", "3307");
-if(!$link){
+$link = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
+if (!$link) {
     die(mysqli_connect_errno() . " " . mysqli_connect_error());
-}else{
-    echo ("SITE WORKING!"."<br>");
+} else {
+    echo ("SITE WORKING!" . "<br>");
 }
 
 //убрать отображение ошибок
@@ -33,18 +33,18 @@ if(!$link){
 // ini_set("display_errors",0);
 
 //SELECT
-$layout = function () use($query, $link) {
-    $query = mysqli_query($link,"SELECT * FROM users");
+$layout = function () use ($query, $link) {
+    $query = mysqli_query($link, "SELECT * FROM users");
     //var_dump($query);
     echo "users:";
     echo "<table border='1'>";
     echo "<tr><th>ID</th><th>Login</th></tr>";
     $cache = [];
-    while($row = mysqli_fetch_assoc($query)){
+    while ($row = mysqli_fetch_assoc($query)) {
         //вывод после преобразования в массив
-        echo "<tr><td>". $row['id']."</td><td>". $row['login']."</td></tr>";
+        echo "<tr><td>" . $row['id'] . "</td><td>" . $row['login'] . "</td></tr>";
         //кеширование данных таблицы
-        $cache[]=$row;
+        $cache[] = $row;
     }
     echo "</table>";
 };
@@ -52,8 +52,8 @@ $layout();
 
 //INSERT
 $user_pass = md5('tester');
-$query = mysqli_query($link,"INSERT INTO users (id,login) VALUES (NULL,'tester')");
-if(!$query){
+$query = mysqli_query($link, "INSERT INTO users (id,login) VALUES (NULL,'tester')");
+if (!$query) {
     echo "Добавить нового пользователя не возможно";
 }
 echo "insert success " . $query;
@@ -64,7 +64,7 @@ $query = mysqli_query(
     $link,
     "UPDATE users SET login='newTester' WHERE login='tester'"
 );
-if(!$query){
+if (!$query) {
     echo "Обновление не возможно!";
 }
 echo "update success " . $query;
@@ -80,4 +80,3 @@ $layout();
 
 //ЗАКРЫТИЕ БД(не обязательно)
 mysqli_close($link);
-
