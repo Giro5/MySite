@@ -32,9 +32,10 @@ function Solution(text) {
     if (!Number.isNaN(res))
         return res;
     //calculating a simple operands
-    text = text.replace(/[+-/*%/^]/g, x => ` ${x} `);
-    let txt = text.split(" "),
-        rank = 0,
+    // text = text.replace(/[+/*%/^]/g, x => ` ${x} `);
+    //text = text.replace(/[-]/g, " + 0 - ");
+    // let txt = text.split(" "),
+    let rank = 0,
         ranks = {
             0: ["+", "-"],
             1: ["*", "/", "%"],
@@ -64,6 +65,9 @@ function Solution(text) {
         }
         console.log("rank" + rank);
     }
+    for (let i = text.length - 1; i > 0; i--) {
+
+    }
     console.log(text + " = " + res);
     return res;
 }
@@ -91,13 +95,15 @@ function SolutionFunc(text) {
         case "cube":
             Result = Math.pow(Result, 3.0);
             break;
+        case "log10":
         case "lg"://десятичный логарифм
             Result = Math.log10(Result);
             break;
+        case "log":
         case "ln"://натуральный логарифм
             Result = Math.log(Result);
             break;
-        case "e^"://возведение в экспаненту
+        case "exp"://возведение в экспаненту
             Result = Math.exp(Result);
             break;
         case "-":
