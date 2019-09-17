@@ -32,10 +32,10 @@ function Solution(text) {
     if (!Number.isNaN(res))
         return res;
     //calculating a simple operands
-    // text = text.replace(/[+/*%/^]/g, x => ` ${x} `);
-    //text = text.replace(/[-]/g, " + 0 - ");
-    // let txt = text.split(" "),
-    let rank = 0,
+    text = text.replace(/[+/*%/^]/g, x => ` ${x} `);
+    text = text.replace(/[-]/g, " + 0 - ");
+    let txt = text.split(" "),
+        rank = 0,
         ranks = {
             0: ["+", "-"],
             1: ["*", "/", "%"],
@@ -64,9 +64,6 @@ function Solution(text) {
             rank++;
         }
         console.log("rank" + rank);
-    }
-    for (let i = text.length - 1; i > 0; i--) {
-
     }
     console.log(text + " = " + res);
     return res;
