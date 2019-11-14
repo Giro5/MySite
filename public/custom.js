@@ -6,3 +6,7 @@ for (let i = 0; i < 9; i++) {
 }
 
 console.log(Math.SQRT1_2);
+
+function dropfile(e) {
+    console.dir(e);
+}
