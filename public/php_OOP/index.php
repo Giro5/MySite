@@ -76,3 +76,11 @@ echo $myB->getvalue($myA);
 echo "<br>";
 
 $myC = new C(6543);
+
+echo __DIR__ . "<br><br>";
+
+var_dump($_SERVER);
+
+echo "<br><br>your ip: " . $_SERVER["REMOTE_ADDR"] . "<br><br>";
+echo "you using the browser: " . $_SERVER["HTTP_USER_AGENT"] . "<br><br>";
+echo "info recived method: " . $_SERVER["REQUEST_METHOD"] . "<br><br>";
