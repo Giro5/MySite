@@ -237,3 +237,7 @@ session_start();
 echo $_SESSION["test"];
 
 $_SESSION["test"] = "test";
+
+foreach ($_SERVER as $key => $val) {
+    echo $key . " =<br>" . $val . "<br><br>";
+}
